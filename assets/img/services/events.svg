@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="64px" height="64px" viewBox="44 5026 64 64" overflow="visible" enable-background="new 44 5026 64 64"
+	 xml:space="preserve">
+<defs>
+</defs>
+<rect display="none" fill="#F1F2F2" width="590" height="7500"/>
+<rect x="44" y="5026" display="none" fill="#A7A9AC" width="64" height="64"/>
+<path fill="none" stroke="#414042" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M89.473,5044.795c-2.705-2.709-2.704-7.099,0-9.807l-6.296-6.303c-0.773-0.775-2.025-0.773-2.798,0l-33.578,33.627
+	c-0.772,0.773-0.773,2.026,0,2.8l6.412,6.421c2.705-2.709,7.088-2.71,9.793-0.002c2.706,2.709,2.705,7.1,0,9.808l6.179,6.187
+	c0.772,0.773,2.026,0.773,2.799,0l33.578-33.626c0.773-0.772,0.772-2.029,0-2.803l-6.296-6.304
+	C96.562,5047.503,92.179,5047.503,89.473,5044.795z"/>
+<path fill="none" stroke="#414042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M89.59,5058.921c0.772,0.773,0.772,2.028,0,2.8l-12.593,12.611c-0.772,0.774-2.025,0.774-2.798,0l-13.991-14.008
+	c-0.772-0.773-0.772-2.027,0-2.801l12.592-12.611c0.772-0.773,2.025-0.773,2.798,0L89.59,5058.921z"/>
+<g>
+	<g>
+		
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="77.697" y1="5040.01" x2="78.404" y2="5040.717"/>
+		
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.2798,2.5597,1.2798,2.5597" x1="80.213" y1="5042.528" x2="84.735" y2="5047.056"/>
+		
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1.2798,2.5597,1.2798,2.5597,1.2798,2.5597" x1="85.64" y1="5047.961" x2="92.875" y2="5055.205"/>
+		
+			<line fill="none" stroke="#414042" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="93.78" y1="5056.111" x2="94.486" y2="5056.818"/>
+	</g>
+</g>
+</svg>

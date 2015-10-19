@@ -1,0 +1,78 @@
+$yrs-red: #E34F50;
+
+.yrs-hyperlocal {
+	@include outer-container;
+	.logo {
+		@include span-columns(12);
+		margin-top: 3em;
+		margin-bottom: 3em;
+		img {
+			@include span-columns(4 of 12);
+		}
+	}
+	.intro-yrs {
+		margin-bottom: 3em;
+	}
+
+	ul.roles {
+		li {
+			@include span-columns(6 of 12);
+			margin-bottom: 3em;
+			h2 {
+				float: left;
+				padding-bottom: .75em;
+				border-bottom: 2px solid $color_accent;
+				font-size: 2rem;
+				margin-bottom: 2rem;
+				@media screen and (max-width: $medium-screen) {
+					margin: 1.5rem;
+				}
+				@media screen and (max-width: $small-screen) {
+					margin: 1.5rem;
+					font-size: 1.5rem;
+					padding-bottom: .5rem;
+				}
+			}
+			img,
+			p {
+				display: block;
+				clear: both;
+				float: left;
+				position: relative;
+			}
+			img {
+				height: 200px;
+			}
+			p {
+				width: 100%;
+				margin-top: 2rem;
+				@media screen and (max-width: $medium-screen) {
+					padding: 1.5rem;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $medium-screen) {
+		.logo,
+		.intro {
+			margin-left: 1.5em;
+			margin-right: 1.5em;
+		}
+		.logo img {
+			@include span-columns(8 of 12);
+		}
+		ul.roles li {
+			@include span-columns(12);
+			&:first-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

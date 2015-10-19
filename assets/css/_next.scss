@@ -1,0 +1,14 @@
+.next {
+	@include span-columns(12);
+	text-align: right;
+	margin-top: 1em;
+	a {
+		margin-left: 1.5em;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		&:hover {
+			background: $color_accent;
+			color: white;
+		}
+	}
+}

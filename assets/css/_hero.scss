@@ -1,0 +1,45 @@
+#hero {
+	background-image: url(../img/kaboom.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 5em;
+	padding-bottom: 5rem;
+	min-height: 80vh;
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	h1, 
+	h2,
+	a {
+		margin: 0;
+		text-transform: uppercase;
+	}
+	h1 {
+		font-size: 3rem;
+		color: white;
+	}
+	h2 {
+		font-size: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+		color: white;
+		width: 80%;
+		margin-left: 10%;
+	}
+	a {
+		padding: 0.5rem;
+		border: 2px solid white;
+		font-weight: bold;
+		background: transparent;
+		margin: 0 1rem;
+		color: white;
+		&:hover {
+			background: white;
+			color: $color_accent;
+			cursor: pointer;
+		}
+	}
+}

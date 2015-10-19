@@ -1,0 +1,90 @@
+.case-study {
+	section {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		> * {
+			width: 50vw;
+		}
+		.copy {
+			background: white;
+			.inner {
+				background: $color_accent;
+				color: white;
+				width: 30vw;
+				margin: 7.5vw 10vw;
+				padding: 2.5vw;
+				h2 {
+					float: left;
+					padding-bottom: .75em;
+					border-bottom: 2px solid white;
+				}
+				p {
+					margin-bottom: 0;
+					width: 100%;
+					display: inline-block;
+					i {
+						display: block;
+						margin-top: 1em;
+						font-size: .9em;
+					}
+				}
+			}
+		}
+		.img {
+			background-size: cover;
+		}
+		&:nth-child(2),
+		&:nth-child(6) {
+			.copy {
+				background: $color_accent;
+				.inner {
+					background: white;
+					color: $color_dark-grey;
+				}
+				h2 {
+					border-bottom-color: $color_accent;
+				}
+			}
+		}
+		@media screen and (max-width: $medium-screen) {
+			display: block;
+			.copy {
+				display: block;
+				width: 100vw;
+				padding: $side-padding;
+				.inner {
+					margin: 0;
+					padding: $side-padding;
+					width: 100%;
+				}
+			}
+			&:nth-child(2) .img,
+			&:nth-child(6) .img {
+				display: block;
+				height: 50vh;
+				width: 100vw;
+			}
+		}
+	}
+	.finished-work {
+		background: $color_accent;
+		float: left;
+		width: 100vw;
+		iframe {
+			width: 100vw;
+			height: 100vh;
+			margin-left: 0;
+			float: left;
+		}
+		@media screen and (max-width: $medium-screen) {
+			iframe {
+				height: 57vw;
+			}
+		}
+	}
+	+ footer {
+		margin-top: -1vw;
+	}
+}
+

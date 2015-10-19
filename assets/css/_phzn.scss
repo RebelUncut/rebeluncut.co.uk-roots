@@ -1,0 +1,230 @@
+/***************************
+****************************
+
+Size Mixin
+
+Example Usage:
+
+.element { 
+  @include size(100%); 
+}
+
+.element-2 {
+  @include size(100%, 10px);
+}
+
+Output:
+
+.element {
+  width: 100%;
+  height: 100%;
+}
+
+.element-2 {
+  width: 100%;
+  height: 10px;
+}
+
+****************************
+***************************/
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+
+/***************************
+****************************
+
+Prefix Mixin
+
+Example Usage:
+
+.element {
+  @include prefix((transform: translate(-50%, -50%)), webkit ms);
+}
+ 
+.element-2 {
+  @include prefix((
+    column-count: 3,
+    column-gap: 1em,
+    column-rule: 1px solid silver,
+    column-width: 20em
+  )), webkit moz);
+}
+
+Output:
+
+.element {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+ 
+.other-element {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+  -webkit-column-rule: 1px solid silver;
+  -moz-column-rule: 1px solid silver;
+  column-rule: 1px solid silver;
+  -webkit-column-width: 20em;
+  -moz-column-width: 20em;
+  column-width: 20em;
+}
+
+****************************
+***************************/
+
+@mixin prefix($map, $vendors: webkit moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    // Place un-prefixed version as well
+    #{$prop}: #{$value};
+  }
+}
+
+
+
+
+/***************************
+****************************
+
+Breakpoint Mixin
+
+Example Usage:
+
+.element {
+  color: red;
+ 
+  @include breakpoint(medium) {
+    color: blue;
+  }
+}
+
+Output:
+
+.element {
+  color: red;
+}
+ 
+@media (min-width: 900px) {
+  .element {
+    color: blue;
+  }
+}
+
+****************************
+***************************/
+
+$breakpoints: (
+  'small':  ( min-width:  600px ),
+  'medium': ( min-width:  900px ),
+  'large':  ( min-width: 1200px )
+);
+ 
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+
+
+
+/***************************
+****************************
+
+Vertical Align Mixin
+
+Example Usage:
+
+.element {
+  @include vertical-align;
+}
+
+Note: if the elements become blurry, add this:
+
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+****************************
+***************************/
+
+@mixin vertical-align {
+  @include prefix((transform: translateY(-50%)), webkit ms);
+  position: relative;
+  top: 50%;
+}
+
+
+/***************************
+****************************
+
+Placeholder Color Mixin
+
+Example Usage:
+
+.element {
+  @include vertical-align;
+}
+
+****************************
+***************************/
+
+@mixin placeholder-color($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  :-moz-placeholder {
+    color: $color;
+  }
+
+  ::-moz-placeholder {
+    color: $color;
+  }
+
+  :-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+
+
+/***************************
+****************************
+
+Box Sizing Mixin
+
+Example Usage:
+
+.element {
+  @include box-sizing(border-box);
+}
+
+****************************
+***************************/
+
+@mixin box-sizing($type) {
+  @include prefix((box-sizing: $type), webkit moz ms 0);
+}

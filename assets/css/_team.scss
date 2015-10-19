@@ -1,0 +1,67 @@
+ul.team {
+	@include outer-container;
+	margin-top: 3em;
+	li {
+		@include span-columns(2.4);
+		@include omega(5n);
+		text-align: center;
+		margin-bottom: 3rem;
+		img {
+			@include prefix((border-radius: 100em), webkit moz ms o);
+			width: 100%;
+			display: block;
+			&.hero {
+				display: none;
+			}
+		}
+		h2 {
+			font-weight: 800;
+			margin-top: 1em;
+			margin-bottom: .5rem;
+			a {
+				color: $color_accent;
+				margin-left: .5em;
+			}
+		}
+		h3 {
+			font-weight: 400;
+			margin-bottom: 0;
+			&.hero {
+				display: none;
+			}
+		}
+		&:hover {
+			img {
+				&.headshot {
+					display: none;
+				}
+				&.hero {
+					display: block;
+				}
+			}
+			h3 {
+				&.role {
+					display: none;
+				}
+				&.hero {
+					display: block;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $medium-screen) {
+		padding: 0 1.5rem;
+		li {
+			@include span-columns(6);
+			@include omega(2n);
+			img {
+				padding: 1.5rem;
+			}
+		}
+	}
+	@media screen and (max-width: $small-screen) {
+		li {
+			@include span-columns(12);
+		}
+	}
+}

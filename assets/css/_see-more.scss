@@ -1,0 +1,13 @@
+.see-more {
+	background: $color_accent;
+	width: 100vw;
+	float: left;
+	padding: 2em 0 3em 0;
+	a {
+		@include outer-container;
+		color: white;
+		text-align: center;
+		padding-bottom: .5em;
+		border-bottom: 1px solid white;
+	}
+}

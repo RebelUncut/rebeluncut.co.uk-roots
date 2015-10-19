@@ -1,0 +1,53 @@
+.case-studies {
+	// @include span-columns(12);
+	display: table;
+	ul {
+		// @include span-columns(12);
+		display: table-row;
+		a {
+			// @include span-columns(6 of 12, block-collapse);
+			// @include omega(2n);
+			display: table-cell;
+			width: 50vw;
+			float: left;
+			li {
+				.content {
+					color: white;
+					padding: $side-padding;
+					h1 {
+						font-size: 2em;
+						margin-top: 1rem;
+					}
+					p {
+
+					}
+					.read-more {
+						font-weight: bold;
+						    margin-top: 1.5em;
+    						margin-bottom: 0.25em;
+						i {
+							margin-left: 1em;
+							font-size: 0.8em;
+							@include transition;
+						}
+					}
+				}
+			}
+			&:hover li {
+				cursor: pointer;
+				.content .read-more i {
+					margin-left: 1.5em;
+					@include transition;
+				}
+			}
+		}
+		a.more {
+			width: 100% !important;
+			background: $color_accent;
+			color: white;
+			padding: 1.5em;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+}

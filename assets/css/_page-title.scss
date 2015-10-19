@@ -1,0 +1,29 @@
+.page-title {
+	padding: ($side-padding * 1.5) $side-padding;
+	background-image: url(/assets/img/trianglify.png);
+	@include prefix((background-size: cover), webkit moz ms o);
+	h1 {
+		font-size: 2rem;
+		color: white;
+		font-weight: 800;
+		letter-spacing: -.05em;
+		border-bottom: 2px solid white;
+		padding-bottom: .25em;
+		float: left;
+	}
+	p {
+		float: left;
+		width: 100%;
+		margin-bottom: 0;
+		color: white;
+	}
+	@media screen and (max-width: $medium-screen) {
+		padding: $side-padding;
+		h1 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+	}
+}

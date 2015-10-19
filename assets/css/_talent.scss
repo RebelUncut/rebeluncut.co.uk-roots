@@ -1,0 +1,46 @@
+.talent-footer {
+	padding: ($side-padding * 2) 0;
+	background-image: url(/assets/img/trianglify.png);
+	@include prefix((background-size: cover), webkit moz ms o);
+	float: left;
+	width: 100%;
+	> * {
+		@include outer-container;
+		color: white;
+		text-align: center;
+	}
+	h2 {
+		font-size: 1.25em;
+	}
+	ul li {
+		display: inline;
+		&:after {
+			content: "•";
+			margin-left: .5em;
+			margin-right: .5em;
+		}
+		&:last-child:after {
+			content: "";
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.links {
+		margin-top: .5em;
+		a {
+			color: white;
+			text-decoration: underline;
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+	}
+	@media screen and (max-width: $medium-screen) {
+		padding: $side-padding;
+		.links {
+			margin-top: 1em;
+			a {
+				display: block;
+			}
+		}
+	}
+}
