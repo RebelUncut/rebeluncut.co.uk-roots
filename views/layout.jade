@@ -25,9 +25,11 @@ html(lang="en")
         != css()
 
     body(class="#{pageClass}")
-        include includes/header.jade
 
-        block content
+        .page
+            include includes/header.jade
+            
+            block content
 
         include includes/footer.jade
 

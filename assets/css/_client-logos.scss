@@ -1,7 +1,26 @@
-#client-logos {
+.client-logos {	
 	@include outer-container;
-	padding-bottom: 2.5em;
+	padding: 0 $side-padding;
+	.inner {
+		@include span-columns(12);
+	}
 	img {
-		width: 100%;
+		@include span-columns(2.4);
+		@include omega(5n);
+		padding: 2em;
+		&:nth-child(-n+5) {
+			margin-top: 0em;
+			margin-bottom: 3em;
+		}
+		&:nth-child(n+6) {
+			margin-bottom: 4em;
+		}
+	}
+	@media screen and (max-width: $medium-screen) {
+		padding: 0 $side-padding;
+		img {
+			@include span-columns(2.4);
+			@include omega(5n);
+		}
 	}
 }

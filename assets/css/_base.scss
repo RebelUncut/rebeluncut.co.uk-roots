@@ -1,0 +1,13 @@
+@mixin omega-reset($nth) {
+	&:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+	&:nth-child(#{$nth}+1) { clear: none }
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.page {
+	flex: 1;
+}

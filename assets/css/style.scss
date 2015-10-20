@@ -4,6 +4,8 @@
 @import "vars";
 @import "phzn";
 
+@import "base";
+
 @import "header";
 @import "footer";
 @import "page-title";
@@ -33,4 +35,8 @@ body {
 	padding: 0;
 	min-height: 100vh;
 	font-family: 'Open Sans', 'Helvetica Neue' sans-serif;
+}
+
+* {
+	font-weight: normal;
 }

@@ -1,29 +1,22 @@
 .page-title {
-	padding: ($side-padding * 1.5) $side-padding;
-	background-image: url(/assets/img/trianglify.png);
-	@include prefix((background-size: cover), webkit moz ms o);
+	@include outer-container;
+	padding: 5rem 0;
 	h1 {
-		font-size: 2rem;
-		color: white;
-		font-weight: 800;
-		letter-spacing: -.05em;
-		border-bottom: 2px solid white;
-		padding-bottom: .25em;
-		float: left;
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: normal;
+		text-transform: uppercase;
 	}
 	p {
-		float: left;
-		width: 100%;
-		margin-bottom: 0;
-		color: white;
+		text-align: center;
+		line-height: 2;
 	}
-	@media screen and (max-width: $medium-screen) {
-		padding: $side-padding;
-		h1 {
-			font-size: 2rem;
-		}
-		p {
-			font-size: 1rem;
-		}
-	}
+}
+
+h2.section-header {
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 1em 0 3em;
 }
