@@ -1,6 +1,7 @@
 .client-logos {	
 	@include outer-container;
 	padding: 0 $side-padding;
+	margin-top: -2em;
 	.inner {
 		@include span-columns(12);
 	}

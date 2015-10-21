@@ -1,0 +1,32 @@
+extends layout
+
+block vars
+	- var pageTitle = "Films"
+	- var pageClass = "films"
+
+block content
+	.page-title
+		h1 Our Films
+		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sunt quod rem odio ipsum, consequuntur distinctio, molestiae hic impedit, dignissimos cum nostrum dolores perferendis ipsam fuga praesentium illo eligendi accusantium.
+
+	#films
+		ul
+			li(style="background: #312C4F;")
+				.inner
+					img(src="/img/team-awesome.jpg")
+					ul.meta
+						.info(style="color: white;")
+							h2 Volatile
+							li Length: Feature
+							li Type: Action
+							li Status: In Production
+			li(style="background: #9404A4;")
+				.inner
+					img(src="/img/kaboom.jpg")
+					ul.meta
+						.info(style="color: white;")
+							h2 The Offering
+							li Length: Feature
+							li Type: Dance
+							li Status: Premiered
+							li More: #[a(href="#") theofferingfilm.co.uk]
