@@ -365,6 +365,14 @@ Example Usage:
 
 ****************************
 ***************************/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+.page {
+  flex: 1; }
+
 header {
   max-width: 68em;
   margin-left: auto;
@@ -451,33 +459,29 @@ footer {
       margin: 0 1px; }
 
 .page-title {
-  padding: 3rem 2rem;
-  background-image: url(/assets/img/trianglify.png);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 0; }
+  .page-title::after {
+    clear: both;
+    content: "";
+    display: table; }
   .page-title h1 {
-    font-size: 2rem;
-    color: white;
-    font-weight: 800;
-    letter-spacing: -.05em;
-    border-bottom: 2px solid white;
-    padding-bottom: .25em;
-    float: left; }
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: normal;
+    text-transform: uppercase; }
   .page-title p {
-    float: left;
-    width: 100%;
-    margin-bottom: 0;
-    color: white; }
-  @media screen and (max-width: 72rem) {
-    .page-title {
-      padding: 2rem; }
-      .page-title h1 {
-        font-size: 2rem; }
-      .page-title p {
-        font-size: 1rem; } }
+    text-align: center;
+    line-height: 2; }
+
+h2.section-header {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 1em 0 3em; }
 
 .section-header {
   max-width: 68em;
@@ -556,7 +560,8 @@ footer {
   #hero h2,
   #hero a {
     margin: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: bold; }
   #hero h1 {
     font-size: 3rem;
     color: white; }
@@ -570,7 +575,6 @@ footer {
   #hero a {
     padding: 0.5rem;
     border: 2px solid white;
-    font-weight: bold;
     background: transparent;
     margin: 0 1rem;
     color: white; }
@@ -733,7 +737,8 @@ ul.team {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3em; }
+  margin-top: 0;
+  margin-bottom: 3rem; }
   ul.team::after {
     clear: both;
     content: "";
@@ -744,7 +749,7 @@ ul.team {
     margin-right: 2.35765%;
     width: 18.11388%;
     text-align: center;
-    margin-bottom: 3rem; }
+    margin-bottom: 2rem; }
     ul.team li:last-child {
       margin-right: 0; }
     ul.team li:nth-child(5n) {
@@ -752,17 +757,13 @@ ul.team {
     ul.team li:nth-child(5n+1) {
       clear: left; }
     ul.team li img {
-      -webkit-border-radius: 100em;
-      -moz-border-radius: 100em;
-      -ms-border-radius: 100em;
-      -o-border-radius: 100em;
-      border-radius: 100em;
       width: 100%;
       display: block; }
       ul.team li img.hero {
         display: none; }
     ul.team li h2 {
-      font-weight: 800;
+      font-weight: normal;
+      text-transform: uppercase;
       margin-top: 1em;
       margin-bottom: .5rem; }
       ul.team li h2 a {
@@ -916,17 +917,54 @@ ul.team {
 .case-study + footer {
   margin-top: -1vw; }
 
-#client-logos {
+.client-logos {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 2.5em; }
-  #client-logos::after {
+  padding: 0 2rem;
+  margin-top: -2em; }
+  .client-logos::after {
     clear: both;
     content: "";
     display: table; }
-  #client-logos img {
+  .client-logos .inner {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
     width: 100%; }
+    .client-logos .inner:last-child {
+      margin-right: 0; }
+  .client-logos img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 18.11388%;
+    padding: 2em; }
+    .client-logos img:last-child {
+      margin-right: 0; }
+    .client-logos img:nth-child(5n) {
+      margin-right: 0; }
+    .client-logos img:nth-child(5n+1) {
+      clear: left; }
+    .client-logos img:nth-child(-n+5) {
+      margin-top: 0em;
+      margin-bottom: 3em; }
+    .client-logos img:nth-child(n+6) {
+      margin-bottom: 4em; }
+  @media screen and (max-width: 72rem) {
+    .client-logos {
+      padding: 0 2rem; }
+      .client-logos img {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 18.11388%; }
+        .client-logos img:last-child {
+          margin-right: 0; }
+        .client-logos img:nth-child(5n) {
+          margin-right: 0; }
+        .client-logos img:nth-child(5n+1) {
+          clear: left; } }
 
 .case-study-quote {
   background-image: url(/assets/img/trianglify.png);
@@ -1318,6 +1356,10 @@ ul.team {
     width: 31.76157%; }
     #stories li:last-child {
       margin-right: 0; }
+    #stories li:nth-child(3n) {
+      margin-right: 0; }
+    #stories li:nth-child(3n+1) {
+      clear: left; }
     #stories li a {
       color: black; }
       #stories li a:hover {
@@ -1330,6 +1372,25 @@ ul.team {
       margin: 0.5em 0 0 0; }
     #stories li h3 {
       margin-top: 0.5em; }
+    #stories li:nth-last-child(n+4) {
+      margin-bottom: 2em; }
+  body.work #stories {
+    margin-top: 0; }
+  #stories.more-work li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    #stories.more-work li:nth-child(3n) {
+      margin-right: 2.35765%; }
+    #stories.more-work li:nth-child(3n+1) {
+      clear: none; }
+    #stories.more-work li:last-child {
+      margin-right: 0; }
+    #stories.more-work li:nth-child(4n) {
+      margin-right: 0; }
+    #stories.more-work li:nth-child(4n+1) {
+      clear: left; }
 
 #services {
   max-width: 68em;
@@ -1396,10 +1457,51 @@ ul.team {
       background: #5F4273;
       color: white; }
 
+#films > ul {
+  margin-bottom: 5rem; }
+  #films > ul .inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #films > ul .inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+#films img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 4.2649%; }
+  #films img:last-child {
+    margin-right: 0; }
+
+#films .meta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  position: relative; }
+  #films .meta:last-child {
+    margin-right: 0; }
+  #films .meta .info {
+    position: absolute;
+    bottom: 1.5em;
+    color: white; }
+  #films .meta h2 {
+    text-transform: uppercase;
+    font-size: 1.25em; }
+  #films .meta li a {
+    color: inherit; }
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   font-family: 'Open Sans', 'Helvetica Neue' sans-serif; }
+
+* {
+  font-weight: normal; }
 
  /*# sourceMappingURL=style.css.map */
