@@ -8,13 +8,13 @@
 	img {
 		@include span-columns(2.4);
 		@include omega(5n);
-		padding: 2em;
+		padding: 0.5em;
 		&:nth-child(-n+5) {
 			margin-top: 0em;
-			margin-bottom: 3em;
+			margin-bottom: 0em;
 		}
 		&:nth-child(n+6) {
-			margin-bottom: 4em;
+			margin-bottom: 2.5em;
 		}
 	}
 	@media screen and (max-width: $medium-screen) {
