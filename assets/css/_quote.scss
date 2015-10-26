@@ -1,5 +1,5 @@
 .case-study-quote {
-	background-image: url(/assets/img/trianglify.png);
+	background-image: url(../img/trianglify.png);
 	@include prefix((background-size: cover), webkit moz ms o);
 	display: block;
 	width: 100%;
