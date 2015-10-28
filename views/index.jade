@@ -1,4 +1,4 @@
-extends layout
+extends layout/layout
 
 block vars
 	- var pageTitle = "Home"
@@ -13,39 +13,24 @@ block content
 				a(href="#") #JoinTheRebellion
 				a(href="work") Our work
 	#stories
-		h1 Awesome: achieved
+		h1 Latest uprisings
 		ul
-			li: a(href="asda")
-				img(src="img/case-studies/asda/2.png")
-				h2 A Steak in the Future
-				h3 ASDA
-			li: a(href="pfeg")
-				img(src="img/case-studies/pfeg/1.png")
-				h2 Personal Finance Education
-				h3 IE Design
-			li: a(href="chef")
-				img(src="img/case-studies/chef/2.jpg")
-				h2 From Gate to Plate
-				h3 Chef &amp Brewer
-		//- .next
-		//- 	a(href="/work") More
-	//- #client-logos
-		img(src="img/clients.png")
+			for project in site.work
+				li: a(href=project._url)
+					img(src=project.header_img)
+					h2= project.job
+					h3= project.client
 	#updates
 		h1 Propaganda
 		ul
-			li: a(href="newblood")
-				img(src="img/propaganda/team-awesome.jpg")
-				.meta
-					h2 New Blood
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quibusdam neque id repellendus voluptate, itaque veniam aliquam vel dolor error eligendi. Quae veniam quisquam odio tenetur eius autem, ut doloribus.
-			li: a(href="etrma")
-				img(src="img/propaganda/etrma.png")
-				.meta
-					h2 Kicking Ass All Over Europe
-					p Team Rebel are hugely excited to be teaming up with old friends’ Clive Reeves PR to deliver a new project for the European Tyre and Rubber Manufacturers’ Association, ETRMA. 
+			for update in site.propaganda
+				li: a(href=update._url)
+					img(src=update.header_img)
+					.meta
+						h2= update.title
+						p= update.summary
 	#services
-		h1 Awesome: potential
+		h1 How we'll overthrow
 		p 
 		ul
 			li(style="background-image: url(img/services/film.jpg)")

@@ -1,4 +1,4 @@
-extends layout
+extends layout/layout
 
 block vars
 	- var pageTitle = "Work"
@@ -11,30 +11,11 @@ block content
 
 	#stories
 		ul
-			li: a(href="asda")
-				img(src="img/case-studies/asda/2.png")
-				h2 A Steak in the Future
-				h3 ASDA
-			li: a(href="pfeg")
-				img(src="img/case-studies/pfeg/1.png")
-				h2 PFEG
-				h3 IE Design
-			li: a(href="chef")
-				img(src="img/case-studies/chef/2.jpg")
-				h2 From Gate to Plate
-				h3 Chef &amp Brewer
-			//- li: a(href="#")
-				img(src="img/case-studies/asda/2.png")
-				h2 A Steak in the Future
-				h3 ASDA
-			//- li: a(href="#")
-				img(src="img/case-studies/pfeg/1.png")
-				h2 PFEG
-				h3 IE Design
-			//- sli: a(href="#")
-				img(src="img/case-studies/etrma/1.png")
-				h2 Tyre Education
-				h3 ETRMA
+			for project in site.work
+				li: a(href=project._url)
+					img(src=project.header_img)
+					h2= project.job
+					h3= project.client
 
 	h2.section-header Other Work
 

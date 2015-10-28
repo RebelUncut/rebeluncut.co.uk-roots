@@ -8,7 +8,7 @@
 	img {
 		@include span-columns(2.4);
 		@include omega(5n);
-		padding: 0.5em;
+		padding: 1.5em;
 		&:nth-child(-n+5) {
 			margin-top: 0em;
 			margin-bottom: 0em;

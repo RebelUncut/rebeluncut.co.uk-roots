@@ -43,4 +43,9 @@
 			@include omega(4n);
 		}
 	}
+	body.home & {
+		li:nth-child(n+4) {
+			display: none;
+		}
+	}
 }

@@ -2,7 +2,6 @@ header {
 	@include outer-container;
 	padding-top:1rem;
 	padding-bottom: 0.5rem;
-	border-bottom: 1px solid $color_accent-light;
 	a.logo {
 		@include span-columns(3 of 12);
 		img {
@@ -36,7 +35,10 @@ header {
 			}
 		}
 	}
-	body.home & {
-		border-bottom: 0;
+	body.films &,
+	body.work &,
+	body.team &,
+	body.contact & {
+		border-bottom: 1px solid $color_accent;
 	}
 }
