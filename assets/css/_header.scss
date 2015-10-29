@@ -37,7 +37,8 @@ header {
 	body.films &,
 	body.work &,
 	body.team &,
-	body.contact & {
+	body.contact &,
+	body.updates & {
 		.wrapper .inner {
 			@include span-columns(12);
 			border-bottom: 1px solid $color_accent;
