@@ -2,16 +2,17 @@ extends layout
 
 block vars
 	- var pageTitle = post.page_title
-	- var pageClass = post.page_class
+	- var pageClass = post.page_class + " work-single"
 	
 block content
 	#hero(style="background-image: url(" + post.header_img + "); min-height: 50vh;")
 	
 	#case
-		h1= post.client
-		h2.job= post.job
+		.meta
+			h1.job= post.job
+			h2.client= "Client: " + post.client
 
 		block case-content
 
-	.case-study-quote
+	.case-study-quote: .inner
 		block quote
