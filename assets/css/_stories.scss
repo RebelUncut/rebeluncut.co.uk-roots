@@ -37,6 +37,7 @@
 		margin-top: 0;
 	}
 	&-more-work {
+		@include outer-container;
 		padding: 0 2.5em;
 		li {
 			@include omega-reset(3n);
@@ -49,6 +50,10 @@
 			display: none;
 		}
 	}
+}
+
+body.work h2.section-header.clients {
+	margin-top: 3em;
 }
 
 @media screen and (max-width: $medium-screen) {

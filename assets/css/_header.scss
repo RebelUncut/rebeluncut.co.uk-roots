@@ -38,7 +38,11 @@ header {
 	body.work &,
 	body.team &,
 	body.contact & {
-		border-bottom: 1px solid $color_accent;
+		.wrapper .inner {
+			@include span-columns(12);
+			border-bottom: 1px solid $color_accent;
+			padding-bottom: .5em;
+		}
 	}
 }
 
