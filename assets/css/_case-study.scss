@@ -1,4 +1,8 @@
 body.work-single {
+	#hero {
+		min-height: 50vh;
+		background-position: center center;
+	}
 	#case {
 		.meta {
 			h2 {
@@ -30,6 +34,7 @@ body.work-single {
 				}
 				p {
 					margin-bottom: 0 !important;
+					line-height: 2;
 				}
 			}
 		}

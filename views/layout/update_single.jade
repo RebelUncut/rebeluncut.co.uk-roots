@@ -2,12 +2,13 @@ extends layout
 
 block vars
 	- var pageTitle = post.page_title
-	- var pageClass = post.page_class
+	- var pageClass = post.page_class + " update-single"
 	
 block content
-	#hero(style="background-image: url(" + post.header_img + "); min-height: 50vh;")
+	#hero(style="background-image: url(" + post.header_img + ");")
 	
 	#case
-		h1= post.title
+		h1.title= post.title
 
-		block post-content
+		article
+			block post-content
