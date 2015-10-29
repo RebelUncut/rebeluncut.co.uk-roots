@@ -9,7 +9,7 @@ $color_accent-darker: darken($color_accent, ($color_diff * 2));
 $color_accent-light: lighten($color_accent, $color_diff);
 $color_accent-lighter: lighten($color_accent, ($color_diff * 2));
 
-$medium-screen: 72rem;
+$medium-screen: 800px;
 $small-screen: 500px;
 
 $side-padding: 2rem;

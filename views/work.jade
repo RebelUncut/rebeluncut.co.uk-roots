@@ -14,12 +14,13 @@ block content
 			for project in site.work
 				li: a(href=project._url)
 					img(src=project.header_img)
-					h2= project.job
-					h3= project.client
+					.meta
+						h2= project.job
+						h3= project.client
 
-	h2.section-header Other Work
+	h2.section-header.other Other Work
 
-	#stories.more-work
+	#stories-more-work
 		ul
 			li
 				img(src="img/work/global.jpg")
@@ -70,7 +71,7 @@ block content
 				img(src="img/work/army.jpg")
 				h3 ARMY
 
-	h2.section-header Our Clients
+	h2.section-header.clients Our Clients
 
 	.client-logos
 		.inner

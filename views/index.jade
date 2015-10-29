@@ -18,8 +18,9 @@ block content
 			for project in site.work
 				li: a(href=project._url)
 					img(src=project.header_img)
-					h2= project.job
-					h3= project.client
+					.meta
+						h2= project.job
+						h3= project.client
 	#updates
 		h1 Propaganda
 		ul

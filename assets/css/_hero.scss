@@ -44,3 +44,28 @@
 		}
 	}
 }
+
+@media screen and (max-width: $medium-screen) {
+	#hero {
+		min-height: 60vh;
+	}
+}
+
+@media screen and (max-width: $small-screen) {
+	#hero {
+		padding: 3.5rem 0;
+		h1 {
+			font-size: 1.25rem;
+		}
+		h2, p {
+			font-size: 1em;
+		}
+		a {
+			font-size: 0.8em;
+			display: block;
+			&:last-child {
+				margin-top: 1em;
+			}
+		}
+	}
+}

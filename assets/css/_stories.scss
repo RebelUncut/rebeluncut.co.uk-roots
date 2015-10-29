@@ -36,7 +36,8 @@
 	body.work & {
 		margin-top: 0;
 	}
-	&.more-work {
+	&-more-work {
+		padding: 0 2.5em;
 		li {
 			@include omega-reset(3n);
 			@include span-columns(3 of 12);
@@ -47,5 +48,79 @@
 		li:nth-child(n+4) {
 			display: none;
 		}
+	}
+}
+
+@media screen and (max-width: $medium-screen) {
+	body.work h2.section-header {
+		margin-top: 3em;
+		margin-bottom: 3em;
+		&.other {
+			margin-top: 1.5em;
+		}
+	}
+	#stories {
+		padding-bottom: 0;
+		li {
+			@include span-columns(12 of 12);
+			padding: 1.25em 0 1em;
+			border-bottom: 1px solid $color_light-grey;
+			img {
+				@include span-columns(2 of 12);
+			}
+			.meta {
+				@include span-columns(10 of 12);
+				h2 {
+					margin-top: 0.125em;
+				}
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+		&-more-work li {
+			@include span-columns(4 of 12);
+			@include omega-reset(4n);
+			@include omega(3n);
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: $small-screen) {
+	#stories {
+		margin-top: 2.5em;
+		h1 {
+			font-size: 1.25em;
+		}
+		ul {
+			padding-bottom: 2em;
+		}
+		li {
+			border-bottom: 0;
+			padding-bottom: 0;
+			img,
+			.meta {
+				@include span-columns(12 of 12);
+			}
+			.meta {
+				margin-top: 1em;
+				h2 {
+					font-size: 1.125em;
+				}
+			}
+		}
+		&-more-work {
+			display: none;
+		}
+	}
+	body.work .section-header.other {
+		display: none;
+	}
+	body.work .section-header.clients {
+		margin-top: 1em;
+		margin-bottom: 1em;
 	}
 }

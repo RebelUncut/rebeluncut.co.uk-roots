@@ -49,3 +49,31 @@
 		padding-bottom: 5rem;
 	}
 }
+
+@media screen and (max-width: $small-screen) {
+	#updates {
+		h1 {
+			font-size: 1.25rem;
+		}
+		li {
+			border-bottom: 0;
+			padding-bottom: 0;
+			a {
+				border-bottom: 0;
+			}
+			img,
+			.meta {
+				@include span-columns(12 of 12);
+			}
+			.meta {
+				margin-top: 1em;
+				h2 {
+					font-size: 1.125em;
+				}
+				p {
+					display: none;
+				}
+			}
+		}
+	}
+}

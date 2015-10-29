@@ -19,3 +19,16 @@
 	);
 
 	$("#case section > *").matchHeight();
+
+// jQuery Responsive
+
+	$(document).ready(function() {
+		checkSize();
+    	$(window).resize(checkSize);
+	});
+	
+	function checkSize(){
+	    if($("header").css("background") == "white"){
+	    	console.log("don't trigger me bro");
+	    }
+	}

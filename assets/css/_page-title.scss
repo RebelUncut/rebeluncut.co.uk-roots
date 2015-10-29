@@ -1,6 +1,6 @@
 .page-title {
 	@include outer-container;
-	padding: 5rem 0;
+	padding: 5rem 2.5em;
 	h1 {
 		text-align: center;
 		font-size: 2.5em;
@@ -14,9 +14,21 @@
 }
 
 h2.section-header {
+	@include span-columns(12);
 	font-size: 2em;
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: normal;
 	margin: 1em auto 3em auto;
+}
+
+@media screen and (max-width: $small-screen) {
+	.page-title {
+		h1 {
+			font-size: 1.5em;
+		}
+		p {
+			font-size: 0.8em;
+		}
+	}
 }

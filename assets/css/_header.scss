@@ -1,5 +1,4 @@
 header {
-	@include outer-container;
 	padding-top:1rem;
 	padding-bottom: 0.5rem;
 	a.logo {
@@ -40,5 +39,30 @@ header {
 	body.team &,
 	body.contact & {
 		border-bottom: 1px solid $color_accent;
+	}
+}
+
+@media screen and (max-width: $medium-screen) {
+	header {
+		background: white;
+		a.logo {
+			@include span-columns(12);
+			img {
+				display: block;
+				margin: 2em auto 0;
+			}
+		}
+		nav {
+			@include span-columns(12);
+			ul {
+				width: 100%;
+				text-align: center;
+				li {
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+			}
+		}
 	}
 }

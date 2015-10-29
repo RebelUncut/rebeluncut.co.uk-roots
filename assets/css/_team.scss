@@ -63,6 +63,7 @@ ul.team {
 		padding: 0 1.5rem;
 		li {
 			@include span-columns(6);
+			@include omega-reset(5n);
 			@include omega(2n);
 			img {
 				padding: 1.5rem;

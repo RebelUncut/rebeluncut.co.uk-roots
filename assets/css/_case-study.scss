@@ -61,3 +61,43 @@ body.work-single {
 		}
 	}
 }
+
+@media screen and (max-width: $medium-screen) {
+	body.work-single {
+		#case {
+			padding-bottom: 0;
+		}
+		section {
+			flex-direction: column;
+			margin-bottom: 0;
+			.content,
+			.image {
+				width: 100%;
+				margin-bottom: 3em;
+			}
+			.content .inner {
+				width: 100%;
+				margin: 0;
+			}
+			.image {
+				height: 25vh;
+			}
+			&:nth-child(even) {
+				.image {
+					display: none;
+				}
+			}
+			&:nth-child(odd) {
+				.content .inner {
+					margin-left: 0;
+				}
+			}
+		}
+		.case-study-quote {
+			padding: 4rem 2.5rem;
+			.inner {
+				padding: 0;
+			}
+		}
+	}
+}

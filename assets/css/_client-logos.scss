@@ -18,10 +18,18 @@
 		}
 	}
 	@media screen and (max-width: $medium-screen) {
-		padding: 0 $side-padding;
+		padding: 0 $side-padding $side-padding;
 		img {
-			@include span-columns(2.4);
-			@include omega(5n);
+			@include span-columns(3);
+			@include omega-reset(5n);
+			@include omega(4n);
+		}
+	}
+	@media screen and (max-width: $small-screen) {
+		img {
+			@include span-columns(6);
+			@include omega-reset(4n);
+			@include omega(2n);
 		}
 	}
 }
