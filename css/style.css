@@ -12,7 +12,8 @@ html {
   box-sizing: inherit; }
 
 .wrapper {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto; }
   .wrapper::after {
@@ -374,16 +375,8 @@ body {
   flex: 1; }
 
 header {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #7a5593; }
-  header::after {
-    clear: both;
-    content: "";
-    display: table; }
+  padding-bottom: 0.5rem; }
   header a.logo {
     float: left;
     display: block;
@@ -419,11 +412,51 @@ header {
       header ul a:hover {
         background: #5F4273;
         color: white; }
-  body.home header {
-    border-bottom: 0; }
+  body.films header .wrapper .inner,
+  body.work header .wrapper .inner,
+  body.team header .wrapper .inner,
+  body.contact header .wrapper .inner {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    border-bottom: 1px solid #5F4273;
+    padding-bottom: .5em; }
+    body.films header .wrapper .inner:last-child,
+    body.work header .wrapper .inner:last-child,
+    body.team header .wrapper .inner:last-child,
+    body.contact header .wrapper .inner:last-child {
+      margin-right: 0; }
+
+@media screen and (max-width: 800px) {
+  header {
+    background: white; }
+    header a.logo {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      header a.logo:last-child {
+        margin-right: 0; }
+      header a.logo img {
+        display: block;
+        margin: 2em auto 0; }
+    header nav {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      header nav:last-child {
+        margin-right: 0; }
+      header nav ul {
+        width: 100%;
+        text-align: center; }
+        header nav ul li:first-child {
+          margin-left: 0; } }
 
 footer {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 4em; }
@@ -459,10 +492,11 @@ footer {
       margin: 0 1px; }
 
 .page-title {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
-  padding: 5rem 0; }
+  padding: 5rem 2.5em; }
   .page-title::after {
     clear: both;
     content: "";
@@ -477,14 +511,28 @@ footer {
     line-height: 2; }
 
 h2.section-header {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
   font-size: 2em;
   text-align: center;
   text-transform: uppercase;
   font-weight: normal;
-  margin: 1em 0 3em; }
+  margin: 1em auto 3em auto;
+  float: none; }
+  h2.section-header:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 500px) {
+  .page-title h1 {
+    font-size: 1.5em; }
+  .page-title p {
+    font-size: 0.8em; } }
 
 .section-header {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto; }
   .section-header::after {
@@ -499,7 +547,7 @@ h2.section-header {
     border-bottom: 2px solid #5F4273;
     float: left;
     padding-bottom: 1rem; }
-    @media screen and (max-width: 72rem) {
+    @media screen and (max-width: 800px) {
       .section-header h1 {
         margin: 2rem;
         margin-top: 2em;
@@ -518,7 +566,8 @@ h2.section-header {
   float: left;
   padding: 2em 0 3em 0; }
   .see-more a {
-    max-width: 68em;
+    max-width: 68rem;
+    padding: 0 2.5em;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -539,7 +588,7 @@ h2.section-header {
     margin-top: 0;
     padding: 4rem 2rem;
     color: white; }
-    @media screen and (max-width: 72rem) {
+    @media screen and (max-width: 800px) {
       .intro h1 {
         font-size: 1em;
         padding: 2rem; } }
@@ -548,6 +597,7 @@ h2.section-header {
   background-image: url(../img/kaboom.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   padding-top: 5em;
   padding-bottom: 5rem;
   min-height: 80vh; }
@@ -583,8 +633,26 @@ h2.section-header {
       color: #5F4273;
       cursor: pointer; }
 
+@media screen and (max-width: 800px) {
+  #hero {
+    min-height: 60vh; } }
+
+@media screen and (max-width: 500px) {
+  #hero {
+    padding: 3.5rem 0; }
+    #hero h1 {
+      font-size: 1.25rem; }
+    #hero h2, #hero p {
+      font-size: 1em; }
+    #hero a {
+      font-size: 0.8em;
+      display: block; }
+      #hero a:last-child {
+        margin-top: 1em; } }
+
 #updates {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2.5rem; }
@@ -630,10 +698,39 @@ h2.section-header {
   #updates p {
     margin-bottom: 0;
     font-size: 0.8em;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    line-height: 2; }
   #updates h2 {
     margin-bottom: 0;
     text-transform: uppercase; }
+  body.home #updates li:nth-child(n+4) {
+    display: none; }
+  body.updates #updates {
+    padding-bottom: 5rem; }
+
+@media screen and (max-width: 500px) {
+  #updates h1 {
+    font-size: 1.25rem; }
+  #updates li {
+    border-bottom: 0;
+    padding-bottom: 0; }
+    #updates li a {
+      border-bottom: 0; }
+    #updates li img,
+    #updates li .meta {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #updates li img:last-child,
+      #updates li .meta:last-child {
+        margin-right: 0; }
+    #updates li .meta {
+      margin-top: 1em; }
+      #updates li .meta h2 {
+        font-size: 1.125em; }
+      #updates li .meta p {
+        display: none; } }
 
 ul.work-tiles {
   margin-left: auto;
@@ -678,7 +775,7 @@ ul.work-tiles {
         font-weight: bold;
         margin-top: .2em;
         font-size: 1vw; }
-    @media screen and (max-width: 72rem) {
+    @media screen and (max-width: 800px) {
       ul.work-tiles li {
         width: 33.33333vw;
         height: 33.33333vw;
@@ -733,8 +830,14 @@ ul.work-tiles {
     height: 56vw;
     width: 100vw; }
 
+body.team .page-title h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em; }
+
 ul.team {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
@@ -782,7 +885,7 @@ ul.team {
       display: none; }
     ul.team li:hover h3.hero {
       display: block; }
-  @media screen and (max-width: 72rem) {
+  @media screen and (max-width: 800px) {
     ul.team {
       padding: 0 1.5rem; }
       ul.team li {
@@ -792,6 +895,10 @@ ul.team {
         width: 48.82117%; }
         ul.team li:last-child {
           margin-right: 0; }
+        ul.team li:nth-child(5n) {
+          margin-right: 2.35765%; }
+        ul.team li:nth-child(5n+1) {
+          clear: none; }
         ul.team li:nth-child(2n) {
           margin-right: 0; }
         ul.team li:nth-child(2n+1) {
@@ -846,79 +953,76 @@ ul.team {
       font-weight: bold;
       text-align: center; }
 
-.case-study section {
+body.work-single #hero {
+  min-height: 50vh;
+  background-position: center center; }
+
+body.work-single #case .meta h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 2em; }
+
+body.work-single section {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; }
-  .case-study section > * {
-    width: 50vw; }
-  .case-study section .copy {
-    background: white; }
-    .case-study section .copy .inner {
-      background: #5F4273;
-      color: white;
-      width: 30vw;
-      margin: 7.5vw 10vw;
-      padding: 2.5vw; }
-      .case-study section .copy .inner h2 {
-        float: left;
-        padding-bottom: .75em;
-        border-bottom: 2px solid white; }
-      .case-study section .copy .inner p {
-        margin-bottom: 0;
-        width: 100%;
-        display: inline-block; }
-        .case-study section .copy .inner p i {
-          display: block;
-          margin-top: 1em;
-          font-size: .9em; }
-  .case-study section .img {
-    background-size: cover; }
-  .case-study section:nth-child(2) .copy,
-  .case-study section:nth-child(6) .copy {
-    background: #5F4273; }
-    .case-study section:nth-child(2) .copy .inner,
-    .case-study section:nth-child(6) .copy .inner {
-      background: white;
-      color: #3B4746; }
-    .case-study section:nth-child(2) .copy h2,
-    .case-study section:nth-child(6) .copy h2 {
-      border-bottom-color: #5F4273; }
-  @media screen and (max-width: 72rem) {
-    .case-study section {
-      display: block; }
-      .case-study section .copy {
-        display: block;
-        width: 100vw;
-        padding: 2rem; }
-        .case-study section .copy .inner {
-          margin: 0;
-          padding: 2rem;
-          width: 100%; }
-      .case-study section:nth-child(2) .img,
-      .case-study section:nth-child(6) .img {
-        display: block;
-        height: 50vh;
-        width: 100vw; } }
+  margin-bottom: 2.5em; }
+  body.work-single section .content,
+  body.work-single section .image {
+    width: 50%; }
+  body.work-single section .content .inner {
+    background: white;
+    width: 80%;
+    margin: 5em 0; }
+    body.work-single section .content .inner h2 {
+      font-weight: bold;
+      color: #5F4273;
+      margin-bottom: 1em;
+      font-size: 1.5em; }
+    body.work-single section .content .inner p {
+      margin-bottom: 0 !important;
+      line-height: 2; }
+  body.work-single section .image {
+    background-size: cover;
+    background-position: center center; }
+  body.work-single section:nth-child(odd) .image {
+    order: 1; }
+  body.work-single section:nth-child(odd) .content {
+    order: 2; }
+    body.work-single section:nth-child(odd) .content .inner {
+      margin-left: 20%; }
 
-.case-study .finished-work {
-  background: #5F4273;
-  float: left;
-  width: 100vw; }
-  .case-study .finished-work iframe {
-    width: 100vw;
-    height: 100vh;
-    margin-left: 0;
-    float: left; }
-  @media screen and (max-width: 72rem) {
-    .case-study .finished-work iframe {
-      height: 57vw; } }
+body.work-single .case-study-quote {
+  margin-bottom: 4rem;
+  color: white; }
+  body.work-single .case-study-quote p:last-child {
+    margin-bottom: 0; }
 
-.case-study + footer {
-  margin-top: -1vw; }
+@media screen and (max-width: 800px) {
+  body.work-single #case {
+    padding-bottom: 0; }
+  body.work-single section {
+    flex-direction: column;
+    margin-bottom: 0; }
+    body.work-single section .content,
+    body.work-single section .image {
+      width: 100%;
+      margin-bottom: 3em; }
+    body.work-single section .content .inner {
+      width: 100%;
+      margin: 0; }
+    body.work-single section .image {
+      height: 25vh; }
+    body.work-single section:nth-child(even) .image {
+      display: none; }
+    body.work-single section:nth-child(odd) .content .inner {
+      margin-left: 0; }
+  body.work-single .case-study-quote {
+    padding: 4rem 2.5rem; }
+    body.work-single .case-study-quote .inner {
+      padding: 0; } }
 
 .client-logos {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
@@ -939,7 +1043,7 @@ ul.team {
     display: block;
     margin-right: 2.35765%;
     width: 18.11388%;
-    padding: 2em; }
+    padding: 1.5em; }
     .client-logos img:last-child {
       margin-right: 0; }
     .client-logos img:nth-child(5n) {
@@ -948,26 +1052,46 @@ ul.team {
       clear: left; }
     .client-logos img:nth-child(-n+5) {
       margin-top: 0em;
-      margin-bottom: 3em; }
+      margin-bottom: 0em; }
     .client-logos img:nth-child(n+6) {
-      margin-bottom: 4em; }
-  @media screen and (max-width: 72rem) {
+      margin-bottom: 2.5em; }
+  @media screen and (max-width: 800px) {
     .client-logos {
-      padding: 0 2rem; }
+      padding: 0 2rem 2rem; }
       .client-logos img {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 18.11388%; }
+        width: 23.23176%; }
         .client-logos img:last-child {
           margin-right: 0; }
         .client-logos img:nth-child(5n) {
-          margin-right: 0; }
+          margin-right: 2.35765%; }
         .client-logos img:nth-child(5n+1) {
+          clear: none; }
+        .client-logos img:nth-child(4n) {
+          margin-right: 0; }
+        .client-logos img:nth-child(4n+1) {
           clear: left; } }
+  @media screen and (max-width: 500px) {
+    .client-logos img {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .client-logos img:last-child {
+        margin-right: 0; }
+      .client-logos img:nth-child(4n) {
+        margin-right: 2.35765%; }
+      .client-logos img:nth-child(4n+1) {
+        clear: none; }
+      .client-logos img:nth-child(2n) {
+        margin-right: 0; }
+      .client-logos img:nth-child(2n+1) {
+        clear: left; } }
 
 .case-study-quote {
-  background-image: url(/assets/img/trianglify.png);
+  background-image: url(../img/trianglify.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
@@ -975,8 +1099,8 @@ ul.team {
   background-size: cover;
   display: block;
   width: 100%;
-  padding: 4rem 6rem;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  line-height: 2; }
   .case-study-quote blockquote {
     color: white;
     font-weight: bold;
@@ -999,13 +1123,21 @@ ul.team {
     .case-study-quote cite:before {
       content: "-";
       margin-right: .5em; }
-  @media screen and (max-width: 72rem) {
-    .case-study-quote {
-      padding: 4rem 2rem;
-      font-size: 1em; } }
+  .case-study-quote .inner {
+    max-width: 68rem;
+    padding: 0 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 4rem 0; }
+    .case-study-quote .inner::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 .contact {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto; }
   .contact::after {
@@ -1086,7 +1218,8 @@ ul.team {
       display: none; } }
 
 .yrs-hyperlocal {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto; }
   .yrs-hyperlocal::after {
@@ -1125,7 +1258,7 @@ ul.team {
       border-bottom: 2px solid #5F4273;
       font-size: 2rem;
       margin-bottom: 2rem; }
-      @media screen and (max-width: 72rem) {
+      @media screen and (max-width: 800px) {
         .yrs-hyperlocal ul.roles li h2 {
           margin: 1.5rem; } }
       @media screen and (max-width: 500px) {
@@ -1144,10 +1277,10 @@ ul.team {
     .yrs-hyperlocal ul.roles li p {
       width: 100%;
       margin-top: 2rem; }
-      @media screen and (max-width: 72rem) {
+      @media screen and (max-width: 800px) {
         .yrs-hyperlocal ul.roles li p {
           padding: 1.5rem; } }
-  @media screen and (max-width: 72rem) {
+  @media screen and (max-width: 800px) {
     .yrs-hyperlocal .logo,
     .yrs-hyperlocal .intro {
       margin-left: 1.5em;
@@ -1180,7 +1313,8 @@ ul.team {
   float: left;
   width: 100%; }
   .talent-footer > * {
-    max-width: 68em;
+    max-width: 68rem;
+    padding: 0 2.5em;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -1208,7 +1342,7 @@ ul.team {
       text-decoration: underline;
       margin-left: 1em;
       margin-right: 1em; }
-  @media screen and (max-width: 72rem) {
+  @media screen and (max-width: 800px) {
     .talent-footer {
       padding: 2rem; }
       .talent-footer .links {
@@ -1217,7 +1351,8 @@ ul.team {
           display: block; } }
 
 .training .courses > li {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
@@ -1298,7 +1433,7 @@ ul.team {
       margin: 7.5px 0;
       background-image: url(/assets/img/bullet-white.png); }
 
-@media screen and (max-width: 72rem) {
+@media screen and (max-width: 800px) {
   .training .courses {
     padding: 0 2rem; }
     .training .courses > li > ul.topics {
@@ -1330,7 +1465,8 @@ ul.team {
       margin-left: 0%; } }
 
 #stories {
-  max-width: 68em;
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2.5rem;
@@ -1367,7 +1503,7 @@ ul.team {
     #stories li img {
       width: 100%; }
     #stories li h2 {
-      font-size: 1.5em;
+      font-size: 1.25em;
       text-transform: uppercase;
       margin: 0.5em 0 0 0; }
     #stories li h3 {
@@ -1376,45 +1512,145 @@ ul.team {
       margin-bottom: 2em; }
   body.work #stories {
     margin-top: 0; }
-  #stories.more-work li {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    #stories.more-work li:nth-child(3n) {
-      margin-right: 2.35765%; }
-    #stories.more-work li:nth-child(3n+1) {
-      clear: none; }
-    #stories.more-work li:last-child {
-      margin-right: 0; }
-    #stories.more-work li:nth-child(4n) {
-      margin-right: 0; }
-    #stories.more-work li:nth-child(4n+1) {
-      clear: left; }
+  #stories-more-work {
+    max-width: 68rem;
+    padding: 0 2.5em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2.5em; }
+    #stories-more-work::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #stories-more-work li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      #stories-more-work li:nth-child(3n) {
+        margin-right: 2.35765%; }
+      #stories-more-work li:nth-child(3n+1) {
+        clear: none; }
+      #stories-more-work li:last-child {
+        margin-right: 0; }
+      #stories-more-work li:nth-child(4n) {
+        margin-right: 0; }
+      #stories-more-work li:nth-child(4n+1) {
+        clear: left; }
+  body.home #stories li:nth-child(n+4) {
+    display: none; }
 
-#services {
-  max-width: 68em;
+body.work h2.section-header.clients {
+  margin-top: 3em; }
+
+@media screen and (max-width: 800px) {
+  body.work h2.section-header {
+    margin-top: 3em;
+    margin-bottom: 3em; }
+    body.work h2.section-header.other {
+      margin-top: 1.5em; }
+  #stories {
+    padding-bottom: 0; }
+    #stories li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      padding: 1.25em 0 1em;
+      border-bottom: 1px solid #EEEDED; }
+      #stories li:last-child {
+        margin-right: 0; }
+      #stories li img {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%; }
+        #stories li img:last-child {
+          margin-right: 0; }
+      #stories li .meta {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        #stories li .meta:last-child {
+          margin-right: 0; }
+        #stories li .meta h2 {
+          margin-top: 0.125em; }
+      #stories li:last-child {
+        border-bottom: 0; }
+    #stories-more-work li {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      #stories-more-work li:last-child {
+        margin-right: 0; }
+      #stories-more-work li:nth-child(4n) {
+        margin-right: 2.35765%; }
+      #stories-more-work li:nth-child(4n+1) {
+        clear: none; }
+      #stories-more-work li:nth-child(3n) {
+        margin-right: 0; }
+      #stories-more-work li:nth-child(3n+1) {
+        clear: left; }
+      #stories-more-work li:last-child {
+        display: none; } }
+
+@media screen and (max-width: 500px) {
+  #stories {
+    margin-top: 2.5em; }
+    #stories h1 {
+      font-size: 1.25em; }
+    #stories ul {
+      padding-bottom: 2em; }
+    #stories li {
+      border-bottom: 0;
+      padding-bottom: 0; }
+      #stories li img,
+      #stories li .meta {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        #stories li img:last-child,
+        #stories li .meta:last-child {
+          margin-right: 0; }
+      #stories li .meta {
+        margin-top: 1em; }
+        #stories li .meta h2 {
+          font-size: 1.125em; }
+    #stories-more-work {
+      display: none; }
+  body.work .section-header.other {
+    display: none; }
+  body.work .section-header.clients {
+    margin-top: 1em;
+    margin-bottom: 1em; } }
+
+#services, #blog, #case {
+  max-width: 68rem;
+  padding: 0 2.5em;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 2.5rem; }
-  #services::after {
+  #services::after, #blog::after, #case::after {
     clear: both;
     content: "";
     display: table; }
-  #services h1 {
+  #services h1, #blog h1, #case h1 {
     font-size: 2em;
     text-transform: uppercase; }
-  #services p {
+  #services p, #blog p, #case p {
     margin-bottom: 2em; }
-  #services ul {
+  #services ul, #blog ul, #case ul {
     padding-left: 0;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    #services ul:last-child {
+    #services ul:last-child, #blog ul:last-child, #case ul:last-child {
       margin-right: 0; }
-    #services ul li {
+    #services ul li, #blog ul li, #case ul li {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -1423,22 +1659,52 @@ ul.team {
       background-size: cover;
       background-repeat: no-repeat;
       padding: 5em 1em 1em; }
-      #services ul li:last-child {
+      #services ul li:last-child, #blog ul li:last-child, #case ul li:last-child {
         margin-right: 0; }
-      #services ul li:nth-child(3n) {
+      #services ul li:nth-child(3n), #blog ul li:nth-child(3n), #case ul li:nth-child(3n) {
         margin-right: 0; }
-      #services ul li:nth-child(3n+1) {
+      #services ul li:nth-child(3n+1), #blog ul li:nth-child(3n+1), #case ul li:nth-child(3n+1) {
         clear: left; }
-    #services ul svg {
+    #services ul svg, #blog ul svg, #case ul svg {
       height: 4rem; }
-      #services ul svg * {
+      #services ul svg *, #blog ul svg *, #case ul svg * {
         fill: white;
         stroke: #5F4273; }
-    #services ul h3 {
+    #services ul h3, #blog ul h3, #case ul h3 {
       margin-top: 0.5rem;
       margin-bottom: 0;
       color: white;
       text-transform: uppercase; }
+
+@media screen and (max-width: 800px) {
+  #services ul li, #blog ul li, #case ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    #services ul li:last-child, #blog ul li:last-child, #case ul li:last-child {
+      margin-right: 0; }
+    #services ul li:nth-child(3n), #blog ul li:nth-child(3n), #case ul li:nth-child(3n) {
+      margin-right: 2.35765%; }
+    #services ul li:nth-child(3n+1), #blog ul li:nth-child(3n+1), #case ul li:nth-child(3n+1) {
+      clear: none; }
+    #services ul li:nth-child(2n), #blog ul li:nth-child(2n), #case ul li:nth-child(2n) {
+      margin-right: 0; }
+    #services ul li:nth-child(2n+1), #blog ul li:nth-child(2n+1), #case ul li:nth-child(2n+1) {
+      clear: left; } }
+
+@media screen and (max-width: 500px) {
+  #services ul li, #blog ul li, #case ul li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    #services ul li:last-child, #blog ul li:last-child, #case ul li:last-child {
+      margin-right: 0; }
+    #services ul li:nth-child(2n), #blog ul li:nth-child(2n), #case ul li:nth-child(2n) {
+      margin-right: 2.35765%; }
+    #services ul li:nth-child(2n+1), #blog ul li:nth-child(2n+1), #case ul li:nth-child(2n+1) {
+      clear: none; } }
 
 .next {
   float: left;
@@ -1460,7 +1726,8 @@ ul.team {
 #films > ul {
   margin-bottom: 5rem; }
   #films > ul .inner {
-    max-width: 68em;
+    max-width: 68rem;
+    padding: 0 2.5em;
     margin-left: auto;
     margin-right: auto; }
     #films > ul .inner::after {
@@ -1494,6 +1761,41 @@ ul.team {
     font-size: 1.25em; }
   #films .meta li a {
     color: inherit; }
+
+@media screen and (max-width: 800px) {
+  #films img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    margin-left: 0%; }
+    #films img:last-child {
+      margin-right: 0; }
+  #films .meta {
+    display: none; }
+  #films li .inner {
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin-left: 0 !important;
+    padding: 0; } }
+
+#blog h1 {
+  margin-top: 2em; }
+
+#case h1 {
+  margin-top: 2em; }
+
+body.update-single #hero {
+  min-height: 50vh;
+  background-position: center center; }
+
+body.update-single h1.title {
+  margin-bottom: 2em;
+  margin-top: 2em; }
+
+body.update-single article {
+  line-height: 2; }
 
 body {
   margin: 0;
