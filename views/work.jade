@@ -1,4 +1,4 @@
-extends layout
+extends layout/layout
 
 block vars
 	- var pageTitle = "Work"
@@ -6,39 +6,21 @@ block vars
 
 block content
 	.page-title
-		h1 Our Work
-		p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sunt quod rem odio ipsum, consequuntur distinctio, molestiae hic impedit, dignissimos cum nostrum dolores perferendis ipsam fuga praesentium illo eligendi accusantium.
+		h1 Case Studies
+		p  No matter what the project, we strive with passion and purpose to create positive change. 
 
 	#stories
 		ul
-			li: a(href="asda")
-				img(src="img/case-studies/asda/2.png")
-				h2 A Steak in the Future
-				h3 ASDA
-			li: a(href="pfeg")
-				img(src="img/case-studies/pfeg/1.png")
-				h2 PFEG
-				h3 IE Design
-			li: a(href="chef")
-				img(src="img/case-studies/chef/2.jpg")
-				h2 From Gate to Plate
-				h3 Chef &amp Brewer
-			//- li: a(href="#")
-				img(src="img/case-studies/asda/2.png")
-				h2 A Steak in the Future
-				h3 ASDA
-			//- li: a(href="#")
-				img(src="img/case-studies/pfeg/1.png")
-				h2 PFEG
-				h3 IE Design
-			//- sli: a(href="#")
-				img(src="img/case-studies/etrma/1.png")
-				h2 Tyre Education
-				h3 ETRMA
+			for project in site.work
+				li: a(href=project._url)
+					img(src=project.header_img)
+					.meta
+						h2= project.job
+						h3= project.client
 
-	h2.section-header Other Work
+	h2.section-header.other Our Work
 
-	#stories.more-work
+	#stories-more-work
 		ul
 			li
 				img(src="img/work/global.jpg")
@@ -89,7 +71,7 @@ block content
 				img(src="img/work/army.jpg")
 				h3 ARMY
 
-	h2.section-header Our Clients
+	h2.section-header.clients Our Clients
 
 	.client-logos
 		.inner

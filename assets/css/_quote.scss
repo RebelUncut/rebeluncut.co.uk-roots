@@ -3,8 +3,8 @@
 	@include prefix((background-size: cover), webkit moz ms o);
 	display: block;
 	width: 100%;
-	padding: ($side-padding * 2) ($side-padding * 3);
 	font-size: 1.5em;
+	line-height: 2;
 	blockquote {
 		color: white;
 		font-weight: bold;
@@ -32,8 +32,9 @@
 			margin-right: .5em;
 		}
 	}
-	@media screen and (max-width: $medium-screen) {
-		padding: ($side-padding * 2) $side-padding;
-		font-size: 1em;
+	.inner {
+		@include outer-container;
+		text-align: center;
+		padding: $side-padding * 2 0;
 	}
 }

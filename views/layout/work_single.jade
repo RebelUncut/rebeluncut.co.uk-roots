@@ -1,0 +1,18 @@
+extends layout
+
+block vars
+	- var pageTitle = post.page_title
+	- var pageClass = post.page_class + " work-single"
+	
+block content
+	#hero(style="background-image: url(" + post.header_img + ");")
+	
+	#case
+		.meta
+			h1.job= post.job
+			h2.client= "Client: " + post.client
+
+		block case-content
+
+	.case-study-quote: .inner
+		block quote

@@ -34,3 +34,18 @@
 		}
 	}
 }
+
+@media screen and (max-width: $medium-screen) {
+	#services ul li {
+		@include span-columns(6 of 12);
+		@include omega-reset(3n);
+		@include omega(2n);
+	}
+}
+
+@media screen and (max-width: $small-screen) {
+	#services ul li {
+		@include span-columns(12 of 12);
+		@include omega-reset(2n);
+	}
+}

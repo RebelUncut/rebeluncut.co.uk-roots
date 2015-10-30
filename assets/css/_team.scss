@@ -1,3 +1,11 @@
+body.team {
+	.page-title h2 {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
+}
+
 ul.team {
 	@include outer-container;
 	margin-top: 0;
@@ -55,6 +63,7 @@ ul.team {
 		padding: 0 1.5rem;
 		li {
 			@include span-columns(6);
+			@include omega-reset(5n);
 			@include omega(2n);
 			img {
 				padding: 1.5rem;
