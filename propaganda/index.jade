@@ -1,0 +1,19 @@
+extends ../views/layout/layout
+
+block vars
+	- var pageTitle = "Propaganda"
+	- var pageClass = "updates"
+
+block content
+	.page-title
+		h1 Propaganda
+		p To let you keep up with all the latest from Team Rebel, as well as what we're inspired by and rallying against, we've gone for some good, old fashioned propaganda. While we promise not to influence or mislead, we make no apologies for being biased towards awesome. 
+
+	#updates
+		ul
+			for update in site.propaganda
+				li: a(href=update._url)
+					img(src=update.header_img)
+					.meta
+						h2= update.title
+						p= update.summary
