@@ -415,7 +415,8 @@ header {
   body.films header .wrapper .inner,
   body.work header .wrapper .inner,
   body.team header .wrapper .inner,
-  body.contact header .wrapper .inner {
+  body.contact header .wrapper .inner,
+  body.updates header .wrapper .inner {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -425,7 +426,8 @@ header {
     body.films header .wrapper .inner:last-child,
     body.work header .wrapper .inner:last-child,
     body.team header .wrapper .inner:last-child,
-    body.contact header .wrapper .inner:last-child {
+    body.contact header .wrapper .inner:last-child,
+    body.updates header .wrapper .inner:last-child {
       margin-right: 0; }
 
 @media screen and (max-width: 800px) {
@@ -1026,7 +1028,7 @@ body.work-single .case-study-quote {
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
-  margin-top: -2em; }
+  margin-top: -4em; }
   .client-logos::after {
     clear: both;
     content: "";
@@ -1787,12 +1789,12 @@ body.work h2.section-header.clients {
   margin-top: 2em; }
 
 body.update-single #hero {
-  min-height: 50vh;
+  min-height: 60vh;
   background-position: center center; }
 
 body.update-single h1.title {
-  margin-bottom: 2em;
-  margin-top: 2em; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 body.update-single article {
   line-height: 2; }
