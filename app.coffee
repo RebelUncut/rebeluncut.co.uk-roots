@@ -18,5 +18,5 @@ module.exports =
   jade:
     pretty: true
 
-   server: 
-   		clean_urls: false
+   server:
+    clean_urls: false
